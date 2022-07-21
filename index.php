@@ -8,7 +8,26 @@
 </head>
 <body>
 
-    <?php ?>
+    <?php
+        $paragraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+        $badWord = $_GET['badWord'];
+        $paragraphLength = strlen($paragraph);
+    ?>
+
+    <p>
+        <?php echo $paragraph; ?>
+    </p>
+
+    <div>
+        Il testo è composto da <?php echo $paragraphLength; ?> caratteri
+    </div>
+
+
+    <p>
+        Il testo censurato è <?php echo str_replace($badWord, '***', $paragraph); ?>
+    </p>
+
+    
 
 </body>
 </html>
